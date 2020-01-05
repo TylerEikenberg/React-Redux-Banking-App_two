@@ -29,13 +29,13 @@
 .App-link {
   color: #61dafb;
   text-decoration: none;
+  width: 80vw;
 }
 
 .App-ul {
-  min-width: 80vw;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
-
   /* border: 2px solid yellow; */
 }
 .li-style {
@@ -43,12 +43,25 @@
   list-style-type: none;
   padding: 10px 0 10px 0;
   text-align: center;
-  margin: 2vh 10vw 2vh 0;
+  margin: 2vh 0 2vh 0;
   background-color: #484f5e;
+}
+
+.li-active {
+  color: #b7c8b5;
 }
 
 .button-style {
 }
 .button-style:disabled {
   display: none;
+}
+
+@media only screen and (min-width: 430px) {
+  .App-link {
+    width: 30vw;
+  }
+  .li-style:hover {
+    background-color: #14161a;
+  }
 }

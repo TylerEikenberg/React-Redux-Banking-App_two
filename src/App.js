@@ -11,13 +11,28 @@ function App() {
       <div className="App">
         <header className="App-header">
           <ul className="App-ul">
-            <NavLink className="App-link" to="/">
+            <NavLink
+              className="App-link"
+              to="/"
+              exact
+              activeClassName="li-active"
+            >
               <li className="li-style">Home</li>
             </NavLink>
-            <NavLink className="App-link" to="/deposit">
+            <NavLink
+              exact
+              className="App-link"
+              to="/deposit"
+              activeClassName="li-active"
+            >
               <li className="li-style">Deposit</li>
             </NavLink>
-            <NavLink className="App-link" to="/withdraw">
+            <NavLink
+              exact
+              className="App-link"
+              to="/withdraw"
+              activeClassName="li-active"
+            >
               <li className="li-style">Withdraw</li>
             </NavLink>
           </ul>
