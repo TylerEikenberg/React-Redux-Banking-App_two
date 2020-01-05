@@ -7,9 +7,9 @@ function DepositPage() {
   const loading = useSelector(state => state.balanceReducer.loading);
   const dispatch = useDispatch();
 
-  function handleDeposit() {
+  const handleDeposit = () => {
     dispatch(balanceActions.depositAsync(10));
-  }
+  };
 
   return (
     <div className="contents-container">

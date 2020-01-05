@@ -7,9 +7,9 @@ function WithdrawPage() {
   const loading = useSelector(state => state.balanceReducer.loading);
   const dispatch = useDispatch();
 
-  function handleWithdraw() {
+  const handleWithdraw = () => {
     dispatch(balanceActions.withdrawAsync(5));
-  }
+  };
 
   return (
     <div className="contents-container">
