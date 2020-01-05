@@ -7,7 +7,7 @@ function DepositPage() {
   const dispatch = useDispatch();
 
   function handleDeposit() {
-    dispatch({ type: "DEPOSIT", payload: 10 });
+    dispatch(balanceActions.depositAsync());
   }
 
   return (
