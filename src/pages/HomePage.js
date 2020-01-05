@@ -2,13 +2,16 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 function HomePage() {
-  const balance = useSelector(state => state.balanceReducer.balance);
-  const loan = useSelector(state => state.loanReducer.loan);
+  const { balance, loan } = useSelector(state => ({
+    balance: state.balanceReducer.balance,
+    loan: state.loanReducer.loan
+  }));
   const dispatch = useDispatch();
 
-  function loanApplyHandle() {
+  const loanApplyHandle = () => {
     dispatch({ type: "APPLY" });
-  }
+  };
+
   return (
     <div className="contents-container">
       <h1 className="balance-h1">Balance: ${balance}</h1>
