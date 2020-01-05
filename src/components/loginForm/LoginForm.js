@@ -1,14 +1,18 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import * as loginActions from "../../actions/loginActions";
 
 function LoginForm() {
   const [username, setUsername] = useState(null);
+  const dispatch = useDispatch();
 
   const clickSubmitHandle = e => {
     e.preventDefault();
+    dispatch(loginActions.login());
   };
   const inputChangeHandle = e => {
     e.preventDefault();
-    console.log(e.target.value);
+    setUsername(e.target.value);
   };
   return (
     <div>
