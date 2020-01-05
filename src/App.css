@@ -26,13 +26,12 @@
 
 .App-link {
   color: #61dafb;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.li-style {
+  width: 200px;
+  border: 2px solid rgb(160, 160, 194);
+  list-style-type: none;
+  padding: 5px;
 }
