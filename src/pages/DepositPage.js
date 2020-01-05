@@ -12,7 +12,7 @@ function DepositPage() {
   }
 
   return (
-    <div className="deposit-contents-container">
+    <div className="contents-container">
       {loading ? (
         <h1 className="loading-h1">Loading...</h1>
       ) : (

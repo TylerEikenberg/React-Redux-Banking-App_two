@@ -10,7 +10,7 @@ function HomePage() {
     dispatch({ type: "APPLY" });
   }
   return (
-    <div className="homepage-contents-container">
+    <div className="contents-container">
       <h1 className="balance-h1">Balance: ${balance}</h1>
       <h2>{loan ? "Loan Approved" : "Loan Required"}</h2>
       <button

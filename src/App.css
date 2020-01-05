@@ -61,15 +61,8 @@
 .button-style:disabled {
   background-color: #14161a;
 }
-.homepage-contents-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  max-height: 20vh;
-}
-.deposit-contents-container {
+
+.contents-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,5 +84,15 @@
   }
   .li-style:hover {
     background-color: #14161a;
+  }
+  .button-style {
+    border: 2px solid #b7c8b5;
+    background-color: #b7c8b5;
+    width: 10vw;
+    padding: 5px 0 5px 0;
+    font-size: 1em;
+  }
+  .button-style:hover {
+    background-color: #94a292;
   }
 }
