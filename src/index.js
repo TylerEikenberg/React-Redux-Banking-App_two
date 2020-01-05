@@ -3,11 +3,12 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { createStore } from "redux";
+import { createStore, combineReducers } from "redux";
 import balanceReducer from "./store/balanceReducer";
+import loanReducer from "./store/loanReducer";
 import { Provider } from "react-redux";
 
-const store = createStore(balanceReducer);
+const store = createStore(combineReducers({ balanceReducer, loanReducer }));
 
 ReactDOM.render(
   <Provider store={store}>
