@@ -8,7 +8,7 @@ function LoginForm() {
 
   const clickSubmitHandle = e => {
     e.preventDefault();
-    dispatch(loginActions.login());
+    dispatch(loginActions.login(username));
   };
   const inputChangeHandle = e => {
     e.preventDefault();
