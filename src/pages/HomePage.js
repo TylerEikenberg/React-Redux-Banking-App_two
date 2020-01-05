@@ -2,11 +2,9 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 function HomePage() {
-  const { balance, loan, loggedIn, username } = useSelector(state => ({
+  const { balance, loan } = useSelector(state => ({
     balance: state.balanceReducer.balance,
-    loan: state.loanReducer.loan,
-    loggedIn: state.loginReducer.loggedIn,
-    username: state.loginReducer.username
+    loan: state.loanReducer.loan
   }));
   const dispatch = useDispatch();
 

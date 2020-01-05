@@ -6,12 +6,18 @@ import HomePage from "./pages/HomePage";
 import DepositPage from "./pages/DepositPage";
 import WithdrawPage from "./pages/WithdrawPage";
 import LoginForm from "./components/loginForm/LoginForm";
+import { logout } from "./actions/loginActions";
 
 function App() {
   const { loggedIn, username } = useSelector(state => ({
     loggedIn: state.loginReducer.loggedIn,
     username: state.loginReducer.username
   }));
+  const dispatch = useDispatch();
+
+  const logoutClickHandle = () => {
+    dispatch(logout());
+  };
 
   return (
     <BrowserRouter>
