@@ -78,14 +78,27 @@
   margin: 1rem;
 }
 
+/* LoginForm styles */
 .LoginForm-form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid yellow;
-  min-height: 3rem;
+
+  min-height: 5rem;
   padding: 0 1vw 1vh 1vw;
+}
+
+.LoginForm-input {
+  margin: 1vh 0 1vh 0;
+  font-size: 1rem;
+  padding-left: 1vw;
+}
+
+.LoginForm-submit {
+  padding: 1vh 10% 1vh 10%;
+  font-size: 1rem;
+  background-color: #b7c8b5;
 }
 
 /* for desktop */

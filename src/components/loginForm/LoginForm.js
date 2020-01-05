@@ -1,11 +1,12 @@
 import React from "react";
 
-function LoginForm() {
+function LoginForm({ clickSubmitHandle }) {
   return (
     <div>
       <form className="LoginForm-form">
         <label>Login</label>
-        <input type="text" placeholder="username" />
+        <input className="LoginForm-input" type="text" placeholder="username" />
+        <input disabled={false} className="LoginForm-submit" type="submit" />
       </form>
     </div>
   );
