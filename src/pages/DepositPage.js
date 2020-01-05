@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import * as balanceActions from "../actions/balanceActions";
 
 function DepositPage() {
   const balance = useSelector(state => state.balanceReducer.balance);
