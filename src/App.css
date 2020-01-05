@@ -61,7 +61,14 @@
 .button-style:disabled {
   background-color: #14161a;
 }
-
+.homepage-contents-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  max-height: 20vh;
+}
 .deposit-contents-container {
   display: flex;
   flex-direction: column;
