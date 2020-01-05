@@ -6,13 +6,14 @@ import * as serviceWorker from "./serviceWorker";
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import balanceReducer from "./store/balanceReducer";
 import loanReducer from "./store/loanReducer";
+import loginReducer from "./store/loginReducer";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
-  combineReducers({ balanceReducer, loanReducer }),
+  combineReducers({ balanceReducer, loanReducer, loginReducer }),
   composeEnhancer(applyMiddleware(thunk))
 );
 

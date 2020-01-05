@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
-function LoginForm({ clickSubmitHandle }) {
+function LoginForm() {
+  const [username, setUsername] = useState(null);
+
+  const clickSubmitHandle = e => {
+    e.preventDefault();
+  };
+  const inputChangeHandle = e => {
+    e.preventDefault();
+    console.log(e.target.value);
+  };
   return (
     <div>
-      <form className="LoginForm-form">
+      <form onSubmit={clickSubmitHandle} className="LoginForm-form">
         <label>Login</label>
-        <input className="LoginForm-input" type="text" placeholder="username" />
+        <input
+          className="LoginForm-input"
+          type="text"
+          name="username"
+          onChange={inputChangeHandle}
+          placeholder="username"
+        />
         <input disabled={false} className="LoginForm-submit" type="submit" />
       </form>
     </div>
