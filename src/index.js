@@ -3,15 +3,17 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { createStore, combineReducers, applyMiddleware } from "redux";
+import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import balanceReducer from "./store/balanceReducer";
 import loanReducer from "./store/loanReducer";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 const store = createStore(
   combineReducers({ balanceReducer, loanReducer }),
-  applyMiddleware(thunk)
+  composeEnhancer(applyMiddleware(thunk))
 );
 
 ReactDOM.render(
