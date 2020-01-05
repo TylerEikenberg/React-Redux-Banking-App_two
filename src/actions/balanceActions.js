@@ -2,27 +2,27 @@ export function loading() {
   return { type: "LOADING" };
 }
 
-export function deposit() {
-  return { type: "DEPOSIT", payload: 10 };
+export function deposit(num) {
+  return { type: "DEPOSIT", payload: num };
 }
-export function withdraw() {
-  return { type: "WITHDRAW", payload: 10 };
+export function withdraw(num) {
+  return { type: "WITHDRAW", payload: num };
 }
 
-export function depositAsync() {
+export function depositAsync(num) {
   return dispatch => {
     dispatch(loading());
     setTimeout(() => {
-      dispatch(deposit());
+      dispatch(deposit(num));
     }, 1000);
   };
 }
 
-export function withdrawAsync() {
+export function withdrawAsync(num) {
   return dispatch => {
     dispatch(loading());
     setTimeout(() => {
-      dispatch(withdraw());
+      dispatch(withdraw(num));
     }, 1000);
   };
 }

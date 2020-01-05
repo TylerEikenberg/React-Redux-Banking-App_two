@@ -8,7 +8,7 @@ function WithdrawPage() {
   const dispatch = useDispatch();
 
   function handleWithdraw() {
-    dispatch(balanceActions.withdrawAsync());
+    dispatch(balanceActions.withdrawAsync(5));
   }
 
   return (

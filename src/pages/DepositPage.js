@@ -8,7 +8,7 @@ function DepositPage() {
   const dispatch = useDispatch();
 
   function handleDeposit() {
-    dispatch(balanceActions.depositAsync());
+    dispatch(balanceActions.depositAsync(10));
   }
 
   return (
