@@ -78,6 +78,16 @@
   margin: 1rem;
 }
 
+.LoginForm-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid yellow;
+  min-height: 3rem;
+  padding: 0 1vw 1vh 1vw;
+}
+
 /* for desktop */
 @media only screen and (min-width: 430px) {
   .App-link {
