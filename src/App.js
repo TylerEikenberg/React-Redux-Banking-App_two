@@ -1,21 +1,28 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Route, NavLink } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import HomePage from "./pages/HomePage";
 import DepositPage from "./pages/DepositPage";
 import WithdrawPage from "./pages/WithdrawPage";
 import LoginForm from "./components/loginForm/LoginForm";
 
 function App() {
+  const { loggedIn, username } = useSelector(state => ({
+    loggedIn: state.loginReducer.loggedIn,
+    username: state.loginReducer.username
+  }));
+
   return (
     <BrowserRouter>
       <div className="App">
         <header className="App-header">
-          <LoginForm />
+          {loggedIn ? <h3>Hello {username}</h3> : <LoginForm />}
+
           <ul className="App-ul">
             <NavLink
               className="App-link"
-              to="/"
+              to={loggedIn ? "/homepage" : "/"}
               exact
               activeClassName="li-active"
             >
@@ -24,7 +31,7 @@ function App() {
             <NavLink
               exact
               className="App-link"
-              to="/deposit"
+              to={loggedIn ? "/deposit" : "/"}
               activeClassName="li-active"
             >
               <li className="li-style">Deposit</li>
@@ -32,13 +39,13 @@ function App() {
             <NavLink
               exact
               className="App-link"
-              to="/withdraw"
+              to={loggedIn ? "/withdraw" : "/"}
               activeClassName="li-active"
             >
               <li className="li-style">Withdraw</li>
             </NavLink>
           </ul>
-          <Route path="/" exact component={HomePage} />
+          <Route path="/homepage" exact component={HomePage} />
           <Route path="/deposit" exact component={DepositPage} />
           <Route path="/withdraw" exact component={WithdrawPage} />
         </header>
