@@ -4,6 +4,7 @@ import * as balanceActions from "../actions/balanceActions";
 
 function DepositPage() {
   const balance = useSelector(state => state.balanceReducer.balance);
+  const loading = useSelector(state => state.balanceReducer.loading);
   const dispatch = useDispatch();
 
   function handleDeposit() {
@@ -12,7 +13,7 @@ function DepositPage() {
 
   return (
     <div>
-      <h1>Balance: ${balance}</h1>
+      {loading ? <h1>Loading...</h1> : <h1>Balance: ${balance}</h1>}
       <button onClick={handleDeposit}>Deposit</button>
     </div>
   );

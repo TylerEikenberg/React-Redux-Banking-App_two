@@ -1,5 +1,5 @@
 export function loading() {
-  return { type: loading };
+  return { type: "LOADING" };
 }
 
 export function deposit() {
