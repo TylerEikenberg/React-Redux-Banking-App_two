@@ -1,6 +1,9 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Route, NavLink } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import DepositPage from "./pages/DepositPage";
+import WithdrawPage from "./pages/WithdrawPage";
 
 function App() {
   return (
@@ -24,11 +27,11 @@ function App() {
               </NavLink>
             </li>
           </ul>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/deposit" exact component={DepositPage} />
+          <Route path="/withdraw" exact component={WithdrawPage} />
         </header>
       </div>
-      <Route path="/" />
-      <Route path="/deposit" />
-      <Route path="/withdraw" />
     </BrowserRouter>
   );
 }
