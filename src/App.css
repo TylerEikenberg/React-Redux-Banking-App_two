@@ -35,3 +35,9 @@
   list-style-type: none;
   padding: 5px;
 }
+
+.button-style {
+}
+.button-style:disabled {
+  display: none;
+}

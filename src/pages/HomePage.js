@@ -13,7 +13,13 @@ function HomePage() {
     <div>
       <h1>Balance: ${balance}</h1>
       <h2>{loan ? "Loan Approved" : "Loan Required"}</h2>
-      <button onClick={loanApplyHandle}>Apply For Loan</button>
+      <button
+        className="button-style"
+        onClick={loanApplyHandle}
+        disabled={loan ? true : false}
+      >
+        Apply For Loan
+      </button>
     </div>
   );
 }
