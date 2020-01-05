@@ -15,7 +15,7 @@ function HomePage() {
   return (
     <div className="contents-container">
       <h1 className="balance-h1">Balance: ${balance}</h1>
-      <h2>{loan ? "Loan Approved" : "Loan Required"}</h2>
+      <h2 className="balance-h1">{loan ? "Loan Approved" : "Loan Required"}</h2>
       <button
         className="button-style"
         onClick={loanApplyHandle}
