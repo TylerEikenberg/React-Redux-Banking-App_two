@@ -52,11 +52,32 @@
 }
 
 .button-style {
+  border: 2px solid #b7c8b5;
+  background-color: #b7c8b5;
+  width: 50vw;
+  padding: 5px 0 5px 0;
+  font-size: 1em;
 }
 .button-style:disabled {
-  display: none;
+  background-color: #14161a;
 }
 
+.deposit-contents-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  max-height: 20vh;
+}
+.loading-h1 {
+  font-size: 1.5em;
+}
+.balance-h1 {
+  font-size: 1.5em;
+}
+
+/* for desktop */
 @media only screen and (min-width: 430px) {
   .App-link {
     width: 30vw;

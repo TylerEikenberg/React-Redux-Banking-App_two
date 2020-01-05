@@ -11,7 +11,7 @@ function WithdrawPage() {
 
   return (
     <div>
-      <h1>Balance: ${balance}</h1>
+      <h1 className="balance-h1">Balance: ${balance}</h1>
       <button onClick={handleWithdraw}>Withdraw</button>
     </div>
   );

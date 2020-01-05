@@ -12,9 +12,15 @@ function DepositPage() {
   }
 
   return (
-    <div>
-      {loading ? <h1>Loading...</h1> : <h1>Balance: ${balance}</h1>}
-      <button onClick={handleDeposit}>Deposit</button>
+    <div className="deposit-contents-container">
+      {loading ? (
+        <h1 className="loading-h1">Loading...</h1>
+      ) : (
+        <h1 className="balance-h1">Balance: ${balance}</h1>
+      )}
+      <button className="button-style" onClick={handleDeposit}>
+        Deposit
+      </button>
     </div>
   );
 }
