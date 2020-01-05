@@ -4,12 +4,14 @@ import { BrowserRouter, Route, NavLink } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import DepositPage from "./pages/DepositPage";
 import WithdrawPage from "./pages/WithdrawPage";
+import LoginForm from "./components/loginForm/LoginForm";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <header className="App-header">
+          <LoginForm />
           <ul className="App-ul">
             <NavLink
               className="App-link"
