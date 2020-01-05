@@ -10,22 +10,16 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <header className="App-header">
-          <ul style={{ display: "flex" }}>
-            <li className="li-style">
-              <NavLink className="App-link" to="/">
-                Home
-              </NavLink>
-            </li>
-            <li className="li-style">
-              <NavLink className="App-link" to="/deposit">
-                Deposit
-              </NavLink>
-            </li>
-            <li className="li-style">
-              <NavLink className="App-link" to="/withdraw">
-                Withdraw
-              </NavLink>
-            </li>
+          <ul className="App-ul">
+            <NavLink className="App-link" to="/">
+              <li className="li-style">Home</li>
+            </NavLink>
+            <NavLink className="App-link" to="/deposit">
+              <li className="li-style">Deposit</li>
+            </NavLink>
+            <NavLink className="App-link" to="/withdraw">
+              <li className="li-style">Withdraw</li>
+            </NavLink>
           </ul>
           <Route path="/" exact component={HomePage} />
           <Route path="/deposit" exact component={DepositPage} />
