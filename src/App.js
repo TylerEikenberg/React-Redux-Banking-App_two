@@ -26,8 +26,8 @@ function App() {
           {loggedIn ? <h3>Hello {username}</h3> : <LoginForm />}
           {loggedIn ? (
             <NavLink to="/">
-              <button className="button-style" onClick={logoutClickHandle}>
-                Log Out
+              <button className="LoginForm-submit" onClick={logoutClickHandle}>
+                Logout
               </button>
             </NavLink>
           ) : null}
