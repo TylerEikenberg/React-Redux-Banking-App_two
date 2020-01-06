@@ -24,6 +24,11 @@ function App() {
       <div className="App">
         <header className="App-header">
           {loggedIn ? <h3>Hello {username}</h3> : <LoginForm />}
+          {loggedIn ? (
+            <NavLink to="/">
+              <button onClick={logoutClickHandle}>Log Out</button>
+            </NavLink>
+          ) : null}
 
           <ul className="App-ul">
             <NavLink
