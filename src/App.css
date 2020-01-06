@@ -102,7 +102,7 @@
 }
 
 /* for desktop */
-@media only screen and (min-width: 430px) {
+@media only screen and (min-width: 770px) {
   .App-link {
     width: 30vw;
   }
