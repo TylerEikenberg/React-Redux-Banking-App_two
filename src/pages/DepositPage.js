@@ -8,9 +8,6 @@ function DepositPage() {
   const loading = useSelector(state => state.balanceReducer.loading);
   const dispatch = useDispatch();
 
-  // const handleDeposit = () => {
-  //   dispatch(balanceActions.depositAsync(10));
-  // };
   const clickDepositHandle = e => {
     e.preventDefault();
     dispatch(balanceActions.depositAsync(amount));
